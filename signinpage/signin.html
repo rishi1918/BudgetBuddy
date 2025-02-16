@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" sizes="32x32" href="../src/original-890b05f26bffa006d49b4c4143703ae9-removebg-preview.png">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Tiny5&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signinstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div class="containers" >
+    <div class="row box mx-md-5 mt-md-4">
+        <div class="col-md-6 pt-5 px-5  " style="min-height: 92vh;">
+            <img src="../src/original-890b05f26bffa006d49b4c4143703ae9-removebg-preview.png" alt="" width="40px">
+            <h1 class="heading">Get started</h1>
+            <p class="signin">Already have an account? <a href="./login.html" class="ps-1" style="text-decoration: none;color: #2a82f9;">Login</a></p> 
+            <form>
+                <div class="mb-3">
+                  <input type="text" class=" w-100 inputs " id="username" placeholder="Username" aria-describedby="emailHelp">
+                </div>
+                <p class="text-center text-danger d-none" id="usernmaevalidation" style="font-size: 12px;">User already exist try something different</p>
+
+                <div class="mb-3">
+                  <input type="password" class="w-100 inputs" id="password1" placeholder="Password">
+                </div>
+
+                <div class="mb-3">
+                    <input type="password" class="w-100 inputs" id="password2" placeholder="Confirm Password">
+                </div>
+                <p class="text-center text-danger d-none" id="allfieldalert" style="font-size: 12px;">Please enter all fields</p>
+
+                <p class="text-center text-danger d-none" id="pwvalidation" style="font-size: 12px;">Password must include an uppercase letter, lowercase letter, number, and special character</p>
+                <p class="text-center text-danger d-none" id="pwalert" style="font-size: 12px;">Passwords don't match</p>
+                <button type="button" onclick="signup()" class="login text-center mb-3 w-100">Signup</button>
+               <!-- /google -->
+                <button type="button" class="google text-center mb-5 w-100"> <img src="../src/google.png" alt="" width="15px"> Signup with Google</button>
+            </form>
+        </div>
+        <div class="d-none d-md-block col-md-6 rightbg"></div>
+    </div>
+</div>
+
+</body>
+<script>
+const signup = () => {
+    // Get input values
+    const username = document.getElementById("username").value.trim();
+    const password1 = document.getElementById("password1").value;
+    const password2 = document.getElementById("password2").value;
+
+    // Hide previous messages
+    document.getElementById("allfieldalert").classList.add("d-none");
+    document.getElementById("pwvalidation").classList.add("d-none");
+    document.getElementById("pwalert").classList.add("d-none");
+
+    // Check if all fields are filled
+    if (username && password1 && password2) {
+        if (password1 !== password2) {
+            document.getElementById("pwalert").classList.remove("d-none");
+            return; // Exit the function if passwords don't match
+        }
+
+        // Validate password strength
+        const hasUppercase = /[A-Z]/.test(password1);
+        const hasLowercase = /[a-z]/.test(password1);
+        const hasNumber = /\d/.test(password1);
+        const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password1);
+
+        if (hasUppercase && hasLowercase && hasNumber && hasSpecialChar) {
+            // Get existing users from localStorage
+            const users = JSON.parse(localStorage.getItem("users")) || [];
+
+            // Check if the username already exists
+            if (users.some(user => user.username === username)) {
+                document.getElementById("usernmaevalidation").classList.remove("d-none")
+
+                usernmaevalidation
+                return;
+            }   
+                document.getElementById("usernmaevalidation").classList.add("d-none")
+
+            // Add new user
+            users.push({ username, password: password1,budgetData:[] });
+
+            // Save updated user list to localStorage
+            localStorage.setItem("users", JSON.stringify(users));
+
+            window.location = "./login.html"; // Redirect if signup is successful
+        } else {
+            document.getElementById("pwvalidation").classList.remove("d-none");
+        }
+    } else {
+        document.getElementById("allfieldalert").classList.remove("d-none");
+    }
+};
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>

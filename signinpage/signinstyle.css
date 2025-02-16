@@ -1,0 +1,74 @@
+*{
+    color: #2a82f9;
+    margin: 0;
+    padding: 0;
+    font-family: "Archivo", sans-serif;
+}
+
+.box{
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 30px;
+    background-color:rgb(255, 255, 255);
+    border-radius: 0px;
+
+    background-size: cover;
+}
+.rightbg{
+    border-radius:0 0px   50%;
+    background-image: url(../src/videoframe_7909.png);
+    background-size: cover; 
+}
+.rightbglogin{
+    border-radius:0 0px  50% 50%;
+    background-image: url(../src/videoframe_13476.png);
+    background-size: cover;
+}
+.heading{
+    color: black;
+    font-family: "Oxanium", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+.signin{
+    font-size: 14px;
+    color: rgba(80, 80, 80, 0.762);
+}
+.inputs{
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #949494;
+    padding: 3px;
+    font-size: 18px;
+    color: black;
+    outline: none;
+}
+
+.inputs1{
+    width: 49%;
+}
+.login{
+    height: 50px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 3px;
+    font-size: 16px;
+    background-color: #000000;  
+}
+.login:hover{
+    
+    background-color: #2a82f9;  
+}
+.google{
+    height: 50px;
+    border: 1px solid rgba(80, 80, 80, 0.596);
+    font-size: 14px;
+    color: #000000;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: #ffffff;   
+}
+.google:hover{
+    color: #2a82f9;
+}

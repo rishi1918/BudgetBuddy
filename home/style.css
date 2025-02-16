@@ -1,0 +1,274 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    font-family: "Archivo", sans-serif;
+}
+body{
+}
+.box{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 30px;
+    background-color:rgb(255, 255, 255);
+    border-radius: 0px;
+    background-size: cover;
+}
+.containers{
+min-height: 90vh;
+}
+.sidebar{
+    padding-top: 20px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    font-size: 19px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.eachitem{
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: .25rem;
+    cursor: pointer;
+    display: flex;
+    margin-left: 5%;
+    align-items: center;
+}
+@media(max-width: 767px){
+  .sidebar{
+    width: 100%;
+    min-height: 10vh;
+    flex-direction: row;
+    box-shadow: none;
+
+  }  
+}
+.heading{
+    font-family: "Oxanium", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+@media(max-width: 767px){
+    .heading{
+        display: none;
+    }
+    .Bicon{
+        top: 21px;
+        position: absolute;
+       
+        right: 50%;
+    }
+    .Welcome{
+text-align: center;
+    }
+    .subwelcome{
+text-align: center;
+
+
+
+    }
+    .dashboard-summary{
+    margin-left: 1.5rem;
+    }
+    #TransactionsAddingBox{
+        margin-left: .9rem; 
+    }
+    #reportsBox{
+        width: 100;
+        padding-left: 3.5rem;
+        padding-right: 0 !important;
+    }
+    .logout{
+        position: relative;
+        top: 66px !important;
+    }
+
+}
+i{
+    color: rgb(76, 76, 76);
+}
+.Welcome{
+    font-size: 25px;
+    font-weight: 600;
+}
+.subwelcome{
+    margin-top: 5px;
+    font-size: 17px;
+    color: gray;
+}
+.selected{
+    background-color: #2a82f9;
+    color: rgb(255, 255, 255);
+}
+.selected > *{
+    color: rgb(244, 244, 244);
+}
+.sidebar-wrapper {
+    position: relative;
+}
+
+.menu-icon {
+    display: none;
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menu-icon i {
+    color: #2a82f9;
+}
+
+@media (max-width: 767px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .sidebar {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        left: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: white;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transition: left 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+}
+
+.money{
+    font-size: 25px;
+    font-weight: 700;
+    color: #0d0202;
+    font-weight: 300;
+}
+.balance-money{
+    /* border: 2px #0131e5 solid; */
+    border-radius: 7px;
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: #2a82f9;
+    color: #ffffff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+.income{
+    
+    font-size: 19px;
+    font-weight: 600;
+
+ 
+}
+.inputbox{
+    padding: 18px;
+    border: 1px gray solid;
+    outline: none;
+    border-radius: 10px;
+    height: 30px;
+
+}
+.add-transation-box-discription{
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    gap: 10px;
+   
+}
+.transaction-box{
+
+   /* background-color: #2a84f9a7; */
+   padding: 50px;
+   /* border-radius: 10px; */
+   /* border: 3px solid #2a82f9; */
+   
+ box-shadow: rgba(100, 100, 111, 0.2) 7px 7px 29px 7px;
+}
+.btns{
+    background-color: #000000;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    color: white;
+}
+.blue-btn{
+    background-color: #03A9F4;
+    border: none;
+    border-radius: 7px;
+    color: white;
+   
+   
+}
+.balanceEditbtn{
+    border: none;
+    background-color: transparent;
+    padding-left: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+.tableHead{
+    margin: 0;
+    padding: 1.25rem;
+    border: 2px solid #212529;
+    border-radius: 10px 10px 0px 0px;
+}
+@media (max-width: 768px) {
+    .table thead th, .table td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .table th, .table td {
+        word-wrap: break-word;
+    }
+    
+    .table {
+        width: 100%;
+    }
+}
+.stat-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 15px;
+}
+
+.stat-box h6 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.stat-box p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2a82f9;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+.logout{
+    position: absolute;
+    top: 74px;
+   right: 0px;
+    height: 50px;
+    width: 157px;
+    background-color: #2a82f9;
+    color: white;
+    text-align: center;
+    padding-top: 1rem
+}

@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Archivo", sans-serif;
+}
+p{
+    padding: 0;
+    margin: 0;
+}
+.box{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}  
+.heading{
+    font-family: "Oxanium", sans-serif;
+    font-weight: 700;
+}
+.left-content{
+    padding-left: 50px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    align-items: baseline;
+}
+.newbtn{
+    background: #2a82f9;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+}
+.paragray{
+    color: rgb(167, 167, 167);
+}
+.black-btn{
+    background-color: black;
+    border-radius: 30px;
+    width: 130px;
+    padding:  5px;
+    color: white;
+    border: 2px black solid;
+}
+.arrow-btn{
+    font-weight: 500;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    width: 150px;
+    padding:  5px;
+    color: rgb(0, 0, 0);
+    border: none; 
+}
+.arrow-btn:hover{
+   
+    color: #2a82f9;
+    
+    }
+.black-btn:hover{
+background-color:#2a82f9;
+border: 2px white solid;
+
+}
+.right-content{
+  
+    border-radius:   0 0 30% 30%;
+    background-image: url(../src/videoframe_0.png); 
+    background-size: cover;
+  
+    
+}
+
+
+.datebtn{
+    background-color: #1b72e4ac;
+    border: none;
+    border-radius: 30px;
+    height: 30px;
+    color: #ffffff;
+    font-size: 10px;
+    width: 100px;
+}
+.paramoney{
+    font-size: 14px;
+}
+.topbottomright{
+  width: 90%;
+    background-color: #549cf9a8;
+    border-radius: 30px;
+    margin: auto;
+}
+.whitediv{
+    background-color: rgba(255, 255, 255, 0.433);
+    border-radius: 30px;
+    color: white;
+}
+.spent-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+}
+.each-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    padding-left: 5px;
+    border-left: 4px rgba(255, 255, 255, 0.72) solid ;  
+   
+}
+.nameofexpense{
+    font-size: 12px;
+    color: (255, 255, 255, 0.72);
+}
